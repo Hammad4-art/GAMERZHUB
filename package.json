@@ -1,6 +1,7 @@
 {
   "name": "ng-video-game-db",
   "version": "0.0.0",
+  "main": "server.js",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -26,6 +27,7 @@
     "@angular/router": "~11.2.3",
     "angular-gauge": "^4.0.0",
     "express": "^4.17.2",
+    "json-server": "^0.17.0",
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
@@ -51,5 +53,17 @@
   "engines": {
     "node": "v16.13.2",
     "npm": "8.3.1"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hammad4-art/GAMERZHUB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hammad4-art/GAMERZHUB/issues"
+  },
+  "homepage": "https://github.com/Hammad4-art/GAMERZHUB#readme"
 }

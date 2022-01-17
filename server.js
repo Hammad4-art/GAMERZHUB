@@ -1,15 +1,20 @@
-//Install express server
-const express = require('express');
-const path = require('path');
+// server.js
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('./db.json')
+const middlewares = jsonServer.defaults({
+  static: "./build"
+});
 
-const app = express();
-
-// Serve only the static files form the dist directory
-app.use(express.static('./dist/ng-video-game-db'));
-
-app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/ng-video-game-db/'}),
+const port = process.env.PORT || 5000;
+server.use(middlewares);
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+  })
 );
 
-// Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 4000);
+server.use(router);
+server.listen(port, () => {
+  console.log('JSON Server is running')
+});
