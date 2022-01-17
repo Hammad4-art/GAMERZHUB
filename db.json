@@ -18,6 +18,12 @@
       "email": "znadeem12@gmail.com",
       "password": "z27@",
       "id": 2
+    },
+    {
+      "username": "Rubab",
+      "email": "rb@gmail.com",
+      "password": "12@",
+      "id": 3
     }
   ],
   "profile": {
